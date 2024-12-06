@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:login_signup/Screens/Todos/todoScreen.dart';
 import 'package:login_signup/Screens/aboutScreen.dart';
 import 'package:login_signup/Screens/Album/albums.dart';
 import 'package:login_signup/Screens/Post/posts.dart';
@@ -8,8 +9,6 @@ import 'package:login_signup/Screens/settingScreen.dart';
 import 'package:login_signup/Screens/PostList/postListScreen.dart';
 
 class Homescreeen extends StatelessWidget {
-  // final String username; // Accept username as a parameter
-  // const Homescreeen({Key? key, required this.username}) : super(key: key);
   final user = FirebaseAuth.instance.currentUser;
   signout() async {
     await FirebaseAuth.instance.signOut();
@@ -97,6 +96,14 @@ class Homescreeen extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: const Icon(Icons.list_alt_outlined),
+              title: const Text('Todo'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TodoScreen()));
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.settings),
               title: const Text('Settings'),
               onTap: () {
@@ -142,13 +149,6 @@ class Homescreeen extends StatelessWidget {
                           onPressed: () {
                             signout();
                             Navigator.pop(context); // Close the dialog
-                            // Navigator.pop(context); // Close the drawer
-                            // Add your logout logic here
-
-                            // ScaffoldMessenger.of(context).showSnackBar(
-                            //   SnackBar(
-                            //       content: Text("Logged out successfully")),
-                            // );
                           },
                           child: const Text(
                             "Logout",
