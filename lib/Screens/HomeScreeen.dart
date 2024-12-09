@@ -8,6 +8,9 @@ import 'package:login_signup/Screens/Photos/photosScreen.dart';
 import 'package:login_signup/Screens/settingScreen.dart';
 import 'package:login_signup/Screens/PostList/postListScreen.dart';
 
+import 'Map/MapScreen.dart';
+import 'MapList/MapListScreen.dart';
+
 class Homescreeen extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser;
   signout() async {
@@ -101,6 +104,22 @@ class Homescreeen extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => TodoScreen()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.location_on),
+              title: const Text('Map'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MapScreen()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.edit_location_sharp),
+              title: const Text('MapList'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Maplistscreen()));
               },
             ),
             ListTile(
