@@ -15,6 +15,12 @@ dependencies:
   get:
   fluttertoast: ^8.2.8
   http: ^1.2.2
+  google_maps_flutter:
+  url_launcher:
+  permission_handler:
+  location:
+  geolocator: 
+#  get
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -23,4 +29,3 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-  #   - images/a_dot_ham.jpeg
