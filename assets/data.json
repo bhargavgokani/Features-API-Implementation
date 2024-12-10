@@ -48,5 +48,20 @@
     "name": "Domestic Airport",
     "Lat": 22.961869,
     "Long": 72.571480
+  },
+  {
+    "name": "Delhi",
+    "Lat": 28.704060,
+    "Long": 77.102493
+  },
+  {
+    "name": "California",
+    "Lat": 36.778259,
+    "Long": -119.417931
+  },
+  {
+    "name": "Paris",
+    "Lat": 48.856613,
+    "Long": 2.352222
   }
 ]

@@ -19,7 +19,8 @@ dependencies:
   url_launcher:
   permission_handler:
   location:
-  geolocator: 
+  geolocator:
+  flutter_polyline_points:
 #  get
 dev_dependencies:
   flutter_test:

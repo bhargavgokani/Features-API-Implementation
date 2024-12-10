@@ -10,6 +10,7 @@ import 'package:login_signup/Screens/PostList/postListScreen.dart';
 
 import 'Map/MapScreen.dart';
 import 'MapList/MapListScreen.dart';
+import 'Profile/profileScreen.dart';
 
 class Homescreeen extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser;
@@ -123,6 +124,17 @@ class Homescreeen extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: const Icon(Icons.account_circle),
+              title: const Text('Users'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            ProfileScreen())); // Close the drawer
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.settings),
               title: const Text('Settings'),
               onTap: () {
@@ -130,7 +142,7 @@ class Homescreeen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            Settingscreen())); // Close the drawer
+                            const Settingscreen())); // Close the drawer
               },
             ),
             ListTile(
