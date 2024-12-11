@@ -59,6 +59,18 @@ class Homescreeen extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: const Icon(Icons.account_circle),
+              title: const Text('Users'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            ProfileScreen())); // Close the drawer
+              },
+            ),
+
+            ListTile(
               leading: const Icon(Icons.post_add),
               title: const Text('Post'),
               onTap: () {
@@ -121,17 +133,6 @@ class Homescreeen extends StatelessWidget {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Maplistscreen()));
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.account_circle),
-              title: const Text('Users'),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            ProfileScreen())); // Close the drawer
               },
             ),
             ListTile(

@@ -12,6 +12,8 @@ dependencies:
   flutter_svg: ^2.0.7
   firebase_core:
   firebase_auth:
+  firebase_storage:
+  cloudinary:
   get:
   fluttertoast: ^8.2.8
   http: ^1.2.2
@@ -21,6 +23,8 @@ dependencies:
   location:
   geolocator:
   flutter_polyline_points:
+  cloud_firestore:
+  image_picker:
 #  get
 dev_dependencies:
   flutter_test:
